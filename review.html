@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="script.js"></script>  
+</head>
+<body style="background-color:rgb(249, 249, 249);">
+<div class="header">
+    <img src="img/logo.png" alt="logo" />
+    <h2>Home</h2>
+    <h1>Department of<br>Primary Industries</h1>
+</div>
+
+<div class="form">
+    <div class="progress">
+        <h4>1. Details</h4>
+        <h4 style="color:rgb(227, 24, 55);">2. Review</h4>
+        <h4>3. Payment</h4>
+        <h4>4. Done</h4>
+    </div>
+    <br>
+    <h3>Review licence details </h3>
+    <p id="licence_check">Please check your details as these will appear on your licence.</p>
+    <div class="review">
+        <p id="licence_details" style="font-size: 1.4em;"></p>
+        <hr>
+         <div class="row">
+            <div class="column">Date of Birth <br> <p class="user" id="birthday"></p> <br>Postcode <br> <p class="user" id="post"></p></div>
+            <div class="column">Email <br><p class="user" id="mail"></p></h6> <br> Suburb <br><p class="user" id="sub"></p></div>
+            <div class="column">Phone <br><p class="user" id="call"></p> <br> Licence Starts <br><p class="user" id="start"></p></div>
+        </div> 
+        <div id="test1"></div>
+    </div>
+
+    <div class="footer"id="details">
+            <button type="button" id="previous" onclick="location.href='details.html';">Previous</button> 
+            <button type="button" id="continue" onclick="location.href='payment.html';">Continue</button> 
+    </div>
+</div>
+
+<!--Get input from local storage and display so user can review details-->
+<script type ="text/javascript">
+var firstname = localStorage.getItem("firstname")
+var lastname = localStorage.getItem("lastname")
+var startdate = localStorage.getItem("startdate")
+var phone = localStorage.getItem("phone")
+if (localStorage.getItem("type") == 1){
+    var type = "3 Day - $10"}
+else if (localStorage.getItem("type") == 2){
+    var type = "28 Day - $21"}
+else if (localStorage.getItem("type") == 3){
+    var type = "1 Year - $35"}
+else if (localStorage.getItem("type") == 4){
+    var type = "3 Year - $95"}
+var dob = localStorage.getItem("dob")
+var email = localStorage.getItem("email")
+var postcode = localStorage.getItem("postcode")
+var suburb = localStorage.getItem("suburb")
+
+
+document.getElementById("licence_details").innerHTML = firstname+" "+lastname+", "+type;
+document.getElementById("birthday").innerHTML = dob;
+document.getElementById("post").innerHTML = postcode;
+document.getElementById("mail").innerHTML = email;
+document.getElementById("sub").innerHTML = suburb;
+document.getElementById("call").innerHTML = phone;
+document.getElementById("start").innerHTML = startdate;
+</script>
+
+
+
+
+</body>
+</html> 

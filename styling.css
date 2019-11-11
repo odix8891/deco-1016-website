@@ -1,0 +1,53 @@
+@font-face { font-family: Gotham; src: url('gotham.ttf'); } 
+
+
+.header {
+    padding: 0.8%;
+    height: 60px;
+    width: auto;
+    background-color:rgb(249, 249, 249);
+    
+}
+
+.header img {
+    float: left;
+    width: auto;
+    height: 50px;
+    padding-left: 1%;
+    padding-right: 0.5%;
+    color: rgb(19, 56, 128);
+    border-width: 1.7px;
+    border-right-style: solid;
+}
+
+.header h1 {
+    font-family: Gotham;
+    font-weight: 500;
+    font-size: 1.1em;
+    padding-left: 4.6%;
+    color: rgb(19, 56, 128);
+}
+  
+.header h2 {
+    font-family: Gotham;
+    font-weight: 500;
+
+
+}
+
+.title {
+    padding: 1%;
+    height: 100px;
+    width: auto;
+
+}
+
+.title h1 {
+    font-family: Gotham;
+    font-weight: 600;
+    font-size: 2.5em;
+    color: rgb(36, 41, 52);
+    position: relative;
+    display:inline-block;
+    left: 1%;
+}
